@@ -10,33 +10,36 @@ class Wrapper extends Component {
     results: [],
   };
 
-  getData = () => {
-    API.getRandomData().then((res) => {
-      console.log(res);
-      this.setState({ results: res.data.data });
-    });
-  };
+  getData = (() => {
+    API.getRandomData()
+      .then((res) => this.setState({ results: res.data.results }))
+      .catch((err) => console.log(err));
+    console.log(this.state.results, "  RESULTS");
+  })();
 
   handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
+    console.log(name);
     this.setState({ [name]: value });
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    this.getData();
+    // this.getData();
+    //////search data
   };
 
   render() {
     return (
       <div className="wrapper">
         <Form
+          //   onLoad={this.getData}
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <Card />
+        <Card results={this.state.results} />
       </div>
     );
   }
