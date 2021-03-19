@@ -46,15 +46,9 @@ class Wrapper extends Component {
           const second = b.name.last.toLowerCase();
 
           let comparison = 0;
-          if (first > second) {
-            console.log(first, second);
-            comparison = 1;
-            console.log(comparison);
-          } else if (first < second) {
-            console.log(first, second);
-            comparison = -1;
-            console.log(comparison);
-          }
+          if (first > second) comparison = 1;
+          else if (first < second) comparison = -1;
+
           return comparison;
         };
       })()
@@ -73,15 +67,9 @@ class Wrapper extends Component {
           const second = b.dob.age;
 
           let comparison = 0;
-          if (first > second) {
-            console.log(first, second);
-            comparison = 1;
-            console.log(comparison);
-          } else if (first < second) {
-            console.log(first, second);
-            comparison = -1;
-            console.log(comparison);
-          }
+          if (first > second) comparison = 1;
+          else if (first < second) comparison = -1;
+
           return comparison;
         };
       })()
