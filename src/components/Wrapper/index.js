@@ -26,6 +26,8 @@ class Wrapper extends Component {
       el.name.last.toLowerCase().includes(value)
     );
     this.setState({ filtered: newArr });
+    // if (this.state.filtered.length === 0)
+    //   throw new Error(`Employee not found!!`);
   };
 
   handleFormSubmit = (event) => {
@@ -35,11 +37,56 @@ class Wrapper extends Component {
 
   sortName = () => {
     console.log("name");
-    // this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
+    const arr =
+      this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
+    arr.sort(
+      (() => {
+        return function sortIt(a, b) {
+          const first = a.name.last.toLowerCase();
+          const second = b.name.last.toLowerCase();
+
+          let comparison = 0;
+          if (first > second) {
+            console.log(first, second);
+            comparison = 1;
+            console.log(comparison);
+          } else if (first < second) {
+            console.log(first, second);
+            comparison = -1;
+            console.log(comparison);
+          }
+          return comparison;
+        };
+      })()
+    );
+    this.setState({ results: arr });
   };
 
   sortDob = () => {
     console.log("DOB");
+    const arr =
+      this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
+    arr.sort(
+      (() => {
+        return function sortIt(a, b) {
+          const first = a.dob.age;
+          const second = b.dob.age;
+
+          let comparison = 0;
+          if (first > second) {
+            console.log(first, second);
+            comparison = 1;
+            console.log(comparison);
+          } else if (first < second) {
+            console.log(first, second);
+            comparison = -1;
+            console.log(comparison);
+          }
+          return comparison;
+        };
+      })()
+    );
+    this.setState({ results: arr });
   };
 
   render() {
