@@ -1,6 +1,6 @@
 import "./style.css";
 import { React, Component } from "react";
-import Card from "../Card";
+import Table from "../Table";
 import API from "../../utils/API";
 import Form from "../Form";
 
@@ -10,12 +10,12 @@ class Wrapper extends Component {
     results: [],
   };
 
-  getData = (() => {
+  getData = () => {
     API.getRandomData()
       .then((res) => this.setState({ results: res.data.results }))
       .catch((err) => console.log(err));
     console.log(this.state.results, "  RESULTS");
-  })();
+  };
 
   handleInputChange = (event) => {
     const name = event.target.name;
@@ -26,7 +26,7 @@ class Wrapper extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    // this.getData();
+    this.getData();
     //////search data
   };
 
@@ -34,12 +34,11 @@ class Wrapper extends Component {
     return (
       <div className="wrapper">
         <Form
-          //   onLoad={this.getData}
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <Card results={this.state.results} />
+        <Table results={this.state.results} />
       </div>
     );
   }
