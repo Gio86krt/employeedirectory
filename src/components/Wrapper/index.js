@@ -36,7 +36,7 @@ class Wrapper extends Component {
   };
 
   sortName = () => {
-    console.log("name");
+    // console.log("name");
     const arr =
       this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
     arr.sort(
@@ -57,7 +57,7 @@ class Wrapper extends Component {
   };
 
   sortDob = () => {
-    console.log("DOB");
+    // console.log("DOB");
     const arr =
       this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
     arr.sort(
