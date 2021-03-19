@@ -3,15 +3,20 @@ import "./style.css";
 
 function Form(props) {
   return (
-    <div>
+    <div className="form">
       <input
         onChange={props.handleInputChange}
         type="text"
         className="input"
         placeholder="Search employee"
       ></input>
-      <button onClick={props.handleFormSubmit} className="btn btn-primary">
-        Search
+
+      <button
+        onClick={props.handleFormSubmit}
+        id="search"
+        className="btn btn-primary"
+      >
+        Search Employees
       </button>
     </div>
   );

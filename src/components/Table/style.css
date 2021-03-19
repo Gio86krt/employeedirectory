@@ -1,4 +1,12 @@
-.card {
-  max-height: 50px;
-  max-width: 1000px;
+.table {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#lastName {
+  cursor: pointer;
+}
+
+#dob {
+  cursor: pointer;
 }

@@ -3,10 +3,8 @@ import React from "react";
 function TableRow(props) {
   const { name, email, dob, picture } = props.props;
   const birthDay = dob.date.slice(0, 10);
-  // console.log("test tablerow");
-  // console.log(props.props.picture.thumbnail);
   return (
-    <tr>
+    <tr className="tableRow">
       <th scope="row">
         <img src={picture.medium}></img>
       </th>

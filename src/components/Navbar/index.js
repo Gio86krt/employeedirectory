@@ -1,7 +1,8 @@
 import React from "react";
+import "./style.css";
 
 function Navbar() {
-  return <h1>This is the Header</h1>;
+  return <h1 className="header">Employee Directory</h1>;
 }
 
 export default Navbar;

@@ -1,5 +1,15 @@
+.form {
+  background-color: bisque;
+  text-align: center;
+}
+
 .input {
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 40px;
   border: 1px solid black;
+}
+
+.btn {
+  background-color: orange;
+  margin-left: 10px;
 }

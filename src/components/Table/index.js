@@ -9,24 +9,30 @@ function Table(props) {
   // const { name, email, picture } = obj;
   // console.log(name, email, picture.thumbnail);
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th scope="col">Picture</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Email</th>
-          <th scope="col">DOB</th>
-        </tr>
-      </thead>
-      <tbody>
-        {/* onLoad={async () => await props.getData()} */}
-        {props.results.map((el) => {
-          console.log(el);
-          return <TableRow props={el} />;
-        })}
-      </tbody>
-    </table>
+    <div className="row justify-content-center">
+      <div className="col-12 table">
+        <table className="table table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Picture</th>
+              <th scope="col">First Name</th>
+              <th scope="col" onClick={props.sortName} id="lastName">
+                Last Name
+              </th>
+              <th scope="col">Email</th>
+              <th scope="col" id="dob" onClick={props.sortDob}>
+                DOB
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {props.results.map((el) => {
+              return <TableRow props={el} />;
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 

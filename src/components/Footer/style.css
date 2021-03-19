@@ -1,5 +1,8 @@
 .footer {
+  width: 100%;
   background-color: blue;
-  position: absolute;
-  bottom: 5px;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  color: whitesmoke;
 }
