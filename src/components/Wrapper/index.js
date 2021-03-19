@@ -10,8 +10,8 @@ class Wrapper extends Component {
     results: [],
   };
 
-  getData = () => {
-    API.getRandomData()
+  getData = async () => {
+    await API.getRandomData()
       .then((res) => this.setState({ results: res.data.results }))
       .catch((err) => console.log(err));
     console.log(this.state.results, "  RESULTS");
@@ -26,6 +26,7 @@ class Wrapper extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log("CLick");
     this.getData();
     //////search data
   };
@@ -38,7 +39,7 @@ class Wrapper extends Component {
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <Table results={this.state.results} />
+        <Table results={this.state.results} getData={this.getData} />
       </div>
     );
   }

@@ -1,18 +1,18 @@
 import React from "react";
 
 function TableRow(props) {
-  const { name, email, DOB, pictures } = props;
-  console.log("test tablerow");
+  const { name, email, dob, picture } = props.props;
+  // console.log("test tablerow");
+  // console.log(props.props.picture.thumbnail);
   return (
     <tr>
       <th scope="row">
-        {/* <img src={pictures.thumbnail}></img> */}
-        Pic here
+        <img src={picture.thumbnail}></img>
       </th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>DOB</td>
+      <td>{name.first}</td>
+      <td>{name.last}</td>
+      <td>{email}</td>
+      <td>{dob.date}</td>
     </tr>
   );
 }

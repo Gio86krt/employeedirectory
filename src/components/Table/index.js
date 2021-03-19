@@ -20,6 +20,7 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
+        {/* onLoad={async () => await props.getData()} */}
         {props.results.map((el) => {
           console.log(el);
           return <TableRow props={el} />;
