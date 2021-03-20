@@ -1,6 +1,9 @@
 .form {
+  margin-top: -7px;
   background-color: bisque;
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .input {
