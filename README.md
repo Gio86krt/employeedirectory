@@ -5,7 +5,7 @@
 
 ### Description
 
-This app is entirely built with React, clicking on the search button will display random information about employees, to generate the data the random user api (https://randomuser.me/api/) has been used, once the list is generated the user can search for employees within the list, the search criteria is by last name, the app will display people whose last name includes the given input, the user can also order the list by last name and by age clicking on the table headers for last name and DOB.
+This app is entirely built with React, the app will display a list of information about employees, to generate the data the random user api (https://randomuser.me/api/) has been used, once the list is generated the user can search for employees within the list, the search criteria is by last name, the app will display people whose last name includes the given input, the user can also order the list by last name and by age clicking on the table headers for last name and DOB.
 
 ### Table of contents:
 

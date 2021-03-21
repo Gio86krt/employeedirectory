@@ -10,7 +10,7 @@ class Wrapper extends Component {
     filtered: [],
   };
 
-  getData = async () => {
+  componentDidMount = async () => {
     await API.getRandomData()
       .then((res) => this.setState({ results: res.data.results }))
       .catch((err) => console.log(err));
@@ -31,11 +31,10 @@ class Wrapper extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    if (this.state.results.length === 0) this.getData();
+    // if (this.state.results.length === 0) this.getData();
   };
 
   sortName = () => {
-    // console.log("name");
     const arr =
       this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
     arr.sort(
@@ -56,7 +55,6 @@ class Wrapper extends Component {
   };
 
   sortDob = () => {
-    // console.log("DOB");
     const arr =
       this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
     arr.sort(
@@ -82,7 +80,7 @@ class Wrapper extends Component {
         <Form
           search={this.state.search}
           handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
+          // handleFormSubmit={this.handleFormSubmit}
         />
         <Table
           sortName={this.sortName}
@@ -92,7 +90,7 @@ class Wrapper extends Component {
               ? this.state.filtered
               : this.state.results
           }
-          getData={this.getData}
+          // getData={this.getData}
         />
       </div>
     );

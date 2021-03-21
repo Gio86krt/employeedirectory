@@ -1,6 +1,7 @@
 import "./style.css";
 import React from "react";
 import TableRow from "../TableRow/TableRow";
+import Loading from "../Loading/index";
 
 function Table(props) {
   return (
@@ -21,10 +22,14 @@ function Table(props) {
             </tr>
           </thead>
           <tbody>
-            {props.results.map((el) => {
-              console.log(el);
-              return <TableRow key={el.id.value} props={el} />;
-            })}
+            {props.results.length > 0 ? (
+              props.results.map((el) => {
+                console.log(el);
+                return <TableRow key={el.id.value} props={el} />;
+              })
+            ) : (
+              <Loading />
+            )}
           </tbody>
         </table>
       </div>
