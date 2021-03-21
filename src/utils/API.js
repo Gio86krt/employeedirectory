@@ -5,6 +5,6 @@ import axios from "axios";
 // eslint-disable-next-line
 export default {
   getRandomData: function () {
-    return axios.get("https://randomuser.me/api/?results=50&nat=us"); //${baseUrl}?key=${apiKey}&ref=hispcyw7
+    return axios.get("https://randomuser.me/api/?results=100&nat=us"); //${baseUrl}?key=${apiKey}&ref=hispcyw7
   },
 };

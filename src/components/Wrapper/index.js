@@ -29,11 +29,6 @@ class Wrapper extends Component {
     //   throw new Error(`Employee not found!!`);
   };
 
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    // if (this.state.results.length === 0) this.getData();
-  };
-
   sortName = () => {
     const arr =
       this.state.filtered.length > 0 ? this.state.filtered : this.state.results;
@@ -80,7 +75,6 @@ class Wrapper extends Component {
         <Form
           search={this.state.search}
           handleInputChange={this.handleInputChange}
-          // handleFormSubmit={this.handleFormSubmit}
         />
         <Table
           sortName={this.sortName}
@@ -90,7 +84,6 @@ class Wrapper extends Component {
               ? this.state.filtered
               : this.state.results
           }
-          // getData={this.getData}
         />
       </div>
     );

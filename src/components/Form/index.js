@@ -10,14 +10,6 @@ function Form(props) {
         className="input"
         placeholder="Search employee"
       ></input>
-
-      <button
-        onClick={props.handleFormSubmit}
-        id="search"
-        className="btn btn-primary"
-      >
-        Search Employees
-      </button>
     </div>
   );
 }
