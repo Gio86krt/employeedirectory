@@ -51,4 +51,8 @@ n/a
 For questions and collaborations contact me at: [webdevgiova86@gmail.com](mailto:webdevgiova86@gmail.com);
 Or check my [GitHub](https://github.com/Gio86krt)
 
-[Page-Link](https://gio86krt.github.io/employeedirectory/)\
+[App-Link](https://employeedirectory000.herokuapp.com/)\
+
+![Screenshot1](/public/screenshots/first.png)
+![Screenshot2](/public/screenshots/second.png)
+![Screenshot3](/public/screenshots/third.png)

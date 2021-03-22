@@ -25,6 +25,7 @@ function Table(props) {
             {props.results.length > 0 ? (
               props.results.map((el) => {
                 console.log(el);
+
                 return <TableRow key={el.id.value} props={el} />;
               })
             ) : (
