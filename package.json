@@ -1,5 +1,5 @@
 {
-  "name": "employeedirectory",
+  "name": "employee",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://gio86krt.github.io/employeedirectory/"
+  "homepage": "https://gio86krt.github.io/employee/"
 }
